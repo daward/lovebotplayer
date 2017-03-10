@@ -1,5 +1,5 @@
 let _ = require("lodash");
-let randomStatements = require("./randomstatements");
+let randomStatements = require("../utility/randomstatements");
 
 module.exports = (player, opponents) => {
 
@@ -18,5 +18,5 @@ module.exports = (player, opponents) => {
   };
 
   let selected = randomStatements.randPlay(player);
-  return Promise.resolve({ selected: selected.name, cardParameters: cardParameters(selected) });
+  return { selected: selected.name, cardParameters: cardParameters(selected) };
 };

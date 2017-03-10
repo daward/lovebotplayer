@@ -1,6 +1,6 @@
 let _ = require("lodash");
 let cardtypes = require("../definitions/cardtypes");
-let randomStatements = require("./randomstatements");
+let randomStatements = require("../utility/randomstatements");
 
 module.exports = (player, opponents) => {
   let randCardGuess = () => {
@@ -21,5 +21,5 @@ module.exports = (player, opponents) => {
   };
 
   let selected = _.sample(_.filter(player.cards, card => card !== "princess"));
-  return Promise.resolve({ selected, cardParameters: cardParameters(cardtypes[selected]) });
+  return { selected, cardParameters: cardParameters(cardtypes[selected]) };
 };

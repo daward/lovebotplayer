@@ -1,7 +1,7 @@
 let _ = require("lodash");
-let cardsLeft = require("./cardsremaining");
+let cardsLeft = require("../utility/cardsremaining");
 let cardtypes = require("../definitions/cardtypes");
-let randomStatements = require("./randomstatements");
+let randomStatements = require("../utility/randomstatements");
 
 module.exports = (player, opponents) => {
 
@@ -25,5 +25,5 @@ module.exports = (player, opponents) => {
     return opts;
   };
 
-  return Promise.resolve({ selected, cardParameters: cardParameters(cardtypes[selected]) });
+  return { selected, cardParameters: cardParameters(cardtypes[selected]) };
 };

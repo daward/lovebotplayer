@@ -4,7 +4,7 @@ let randomStatements = require("../utility/randomstatements");
 
 module.exports = (player, opponents) => {
   let randCardGuess = () => {
-    return _.sample(_.filter(_.keys(cardtypes), type => type !== "guard"));
+    return _.sample(_.filter(_.keys(cardtypes), type => type !== cardtypes.guard.name));
   };
 
   let cardParameters = (cardType) => {
@@ -20,6 +20,8 @@ module.exports = (player, opponents) => {
     return opts;
   };
 
-  let selected = _.sample(_.filter(player.cards, card => card !== "princess"));
+  let selectedCard = _.sample(_.filter(player.cards, card => card.name !== cardtypes.princess.name)); 
+  let selected = selectedCard.name;
+  
   return { selected, cardParameters: cardParameters(cardtypes[selected]) };
 };

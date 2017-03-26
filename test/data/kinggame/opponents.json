@@ -1,0 +1,27 @@
+[
+  {
+    "protected": false,
+    "active": true,
+    "plays": [],
+    "id": "Auto 1"
+  },
+  {
+    "protected": false,
+    "active": true,
+    "plays": [],
+    "id": "Auto 2"
+  },
+  {
+    "protected": false,
+    "active": false,
+    "plays": [
+      {
+        "name": "king",
+        "value": 6,
+        "target": "Auto 1",
+        "turn": 1
+      }
+    ],
+    "id": "Auto 3"
+  }
+]

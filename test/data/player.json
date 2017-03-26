@@ -1,0 +1,25 @@
+{
+  "protected": false,
+  "active": true,
+  "plays": [
+    {
+      "name": "guard",
+      "value": 1,
+      "guess": "baron",
+      "target": "Auto 3",
+      "turn": 0,
+      "result": "fail"
+    }
+  ],
+  "id": "goodguess2",
+  "cards": {
+    "cards": [
+      {
+        "name": "priest"
+      },
+      {
+        "name": "guard"
+      }
+    ]
+  }
+}

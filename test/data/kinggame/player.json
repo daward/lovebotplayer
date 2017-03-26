@@ -1,0 +1,25 @@
+{
+  "protected": false,
+  "active": true,
+  "plays": [
+    {
+      "name": "guard",
+      "value": 1,
+      "guess": "priest",
+      "target": "Auto 1",
+      "result": "fail",
+      "turn": 0
+    }
+  ],
+  "id": "goodguess2",
+  "cards": {
+    "cards": [
+      {
+        "name": "countess"
+      },
+      {
+        "name": "priest"
+      }
+    ]
+  }
+}

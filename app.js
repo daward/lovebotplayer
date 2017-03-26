@@ -17,7 +17,7 @@ module.exports = {
     }
 
     app.post('/api/strategies/:id', (req, res) => {
-      let strategy = strategies[parseInt(req.params.id)];
+      let strategy = _.find(strategies, strategy => strategy.name === req.params.id).strategy;
       Promise.resolve(strategy(req.body.player, req.body.opponents))
         .then(result => res.json(result));
     });

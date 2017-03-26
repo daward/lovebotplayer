@@ -1,0 +1,41 @@
+[
+  {
+    "protected": true,
+    "active": true,
+    "plays": [
+      {
+        "name": "handmaid",
+        "value": 4,
+        "turn": 1
+      }
+    ],
+    "id": "Auto 1"
+  },
+  {
+    "protected": false,
+    "active": true,
+    "plays": [
+      {
+        "name": "handmaid",
+        "value": 4,
+        "turn": 2
+      }
+    ],
+    "id": "Auto 2"
+  },
+  {
+    "protected": false,
+    "active": true,
+    "plays": [
+      {
+        "name": "guard",
+        "value": 1,
+        "guess": "prince",
+        "target": "Auto 2",
+        "turn": 3,
+        "result": "fail"
+      }
+    ],
+    "id": "Auto 3"
+  }
+]

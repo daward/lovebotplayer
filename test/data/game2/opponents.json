@@ -1,0 +1,36 @@
+[
+  {
+    "protected": false,
+    "active": true,
+    "plays": [
+      {
+        "name": "handmaid",
+        "value": 4,
+        "turn": 2
+      }
+    ],
+    "id": "Auto 1"
+  },
+  {
+    "protected": false,
+    "active": true,
+    "plays": [
+    ],
+    "id": "Auto 2"
+  },
+  {
+    "protected": false,
+    "active": false,
+    "plays": [
+      {
+        "name": "baron",
+        "value": 3,
+        "losingCard": "baron",
+        "result": "draw",
+        "target": "Auto 2",
+        "turn": 1
+      }
+    ],
+    "id": "Auto 3"
+  }
+]

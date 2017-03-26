@@ -1,27 +1,15 @@
-let _ = require("lodash");
-let cardtypes = require("../definitions/cardtypes");
-let randomStatements = require("../utility/randomstatements");
+const _ = require("lodash");
+const cardtypes = require("../definitions/cardtypes");
+const OpponentModel = require("../utility/opponentmodel");
+const CardModel = require("../utility/cardmodel");
 
 module.exports = (player, opponents) => {
-  let randCardGuess = () => {
-    return _.sample(_.filter(_.keys(cardtypes), type => type !== cardtypes.guard.name));
-  };
+  player.cards = new CardModel(player.cards);
+  let opponentModel = new OpponentModel(player, opponents);
 
-  let cardParameters = (cardType) => {
-    var opts = {};
-    if (_.includes(cardType.fields, "target")) {
-      opts.target = randomStatements.randOpponent(opponents, player);
-    }
+  let cards = _.filter(_.keys(cardtypes), card => card !== cardtypes.guard.name);
 
-    if (_.includes(cardType.fields, "guess")) {
-      opts.guess = randCardGuess();
-    }
-
-    return opts;
-  };
-
-  let selectedCard = _.sample(_.filter(player.cards, card => card.name !== cardtypes.princess.name)); 
-  let selected = selectedCard.name;
-  
-  return { selected, cardParameters: cardParameters(cardtypes[selected]) };
+  return player.cards.except(cardtypes.princess.name).randomPlay(
+    () => opponentModel.randomOpponentId(),
+    () => _.sample(cards));
 };

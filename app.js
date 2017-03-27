@@ -1,6 +1,9 @@
-let express = require('express');
-let bodyParser = require('body-parser');
-let _ = require('lodash');
+/**
+ * The express app for a lovebot
+ */
+const express = require('express');
+const bodyParser = require('body-parser');
+const _ = require('lodash');
 
 module.exports = {
   start: (port, logRequests, strategies) => {

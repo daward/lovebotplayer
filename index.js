@@ -4,17 +4,10 @@ module.exports = {
   goodguess: require("./examples/goodguess"),
   playerapi: require('./app'),
   cardtypes: require('./definitions/cardtypes'),
-  start: (config) => {
-    let strategies = require("./strategyloader")(config);
-    const _ = require("lodash");
-    let app = require('./app.js');
-    app.start(
-      _.get(config, "port", 8080), 
-      _.get(config, "enableLogging", false), 
-      strategies);
-    
-    return strategies;
-  },
-  loadStrategies: require("./strategyloader")
+  cli: require("./cli"),
+  start: require("./appstart"),
+  loadStrategies: require("./strategyloader"),
+  CardModel: require("./utility/cardmodel"),
+  OpponentModel: require("./utility/opponentmodel")
 };
 

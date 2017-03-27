@@ -1,4 +1,3 @@
-const strategyLoader = require("./strategyloader");
 const gameRunner = require("./gamerunner");
 const parseArgs = require("minimist");
 const exportedApi = require("./index");

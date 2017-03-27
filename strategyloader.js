@@ -1,3 +1,6 @@
+/**
+ * Creates a list of strategies loaded from a directory
+ */
 const fs = require('fs');
 const path = require('path');
 const _ = require("lodash");
